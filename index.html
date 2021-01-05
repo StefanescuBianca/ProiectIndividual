@@ -1,0 +1,75 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="utf-8"  name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistemul Solar</title>
+<link href="css/a.css" rel="stylesheet" /><!--legatura cu fisierul css-->
+
+<script type="text/javascript"> <!--schimbare imagine sageti pentru click-->
+function s1(){
+document.getElementById("s").src="imagini/s_1.png";
+}
+function s2(){
+document.getElementById("s").src="imagini/s_2.png";
+}
+function d1(){
+document.getElementById("d").src="imagini/d_1.png";
+}
+function d2(){
+document.getElementById("d").src="imagini/d_2.png";
+}
+</script>
+
+</head>
+
+<body background="4.jpg" >
+  <div class="dropdown">
+    <button class="dropbtn">Login</button>
+    <div class="dropdown-content">
+      <a href="http://localhost/registration/register.php">Inregistrare</a>
+      <a href="http://localhost/registration/login.php">Autentificare</a>
+    </div>
+  </div>
+<div class="foto" id="foto">
+
+<!--butonul de schimbare background din stanga-->
+<img src="imagini/s_1.png" onmouseout="s1()" onmouseover="s2()" onclick="f2()"  id="s" />
+<!--butonul de schimbare background din dreapta-->
+<img src="imagini/d_1.png" onmouseout="d1()" onmouseover="d2()" onclick="f1()" name="d" id="d" />
+
+</div>
+<div id="meniu">
+  <div id="butoane">
+    <div id="butoane_1">
+      <div id="buton"><a href="index.html">Home</a></div>
+      <div id="buton"><a href="despre.html">Sistemul Solar</a></div>
+      <div id="buton"><a href="planete.html">Planetele Sistemului Solar</a></div>
+	    <div id="buton"><a href="http://localhost/registration/test.php">Test grilă</a></div>
+    </div>
+  </div>
+</div>
+<script language="javascript"> <!--Schimbare background home-->
+a=1;
+function f1(){
+	if(a<6) a=a+1;
+	if(a==1) document.body.background="1.webp";
+	if(a==2) document.body.background="2.webp";
+	if(a==3) document.body.background="3.jpg";
+	if(a==4) document.body.background="4.jpg";
+	if(a==5) document.body.background="5.png";
+	if(a==6) document.body.background="6.webp";}
+function f2(){
+	if(a>1) a=a-1;
+	if(a==1) document.body.background="1.webp";
+	if(a==2) document.body.background="2.webp";
+	if(a==3) document.body.background="3.jpg";
+	if(a==4) document.body.background="4.jpg";
+	if(a==5) document.body.background="5.png";
+	if(a==6) document.body.background="6.webp";}
+
+</script>
+
+
+</body>
+
+</html>

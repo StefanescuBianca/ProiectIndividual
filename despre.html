@@ -1,0 +1,99 @@
+<!DOCTYPE html >
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Sistemul Solar</title>
+<link href="css/a.css" rel="stylesheet" /><!--legatura cu fisierul css-->
+<style>
+     img{
+       width:283px;
+       height:279px;
+     }
+</style>
+<script type="text/javascript">
+        function enterimg(id) {
+            document.getElementById(id).src = "6.webp";
+        }
+
+        function leaveimg(id) {
+            document.getElementById(id).src = "5.png";
+        }
+
+  function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById("ora").innerHTML = h + ":" + m + ":" + s;
+    var t = setTimeout(function(){ startTime() }, 500);
+  }
+
+  function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
+
+
+  function deschide()
+{
+myWindow=window.open('https://www.youtube.com/watch?v=_TghJUz5Dt0');    
+}
+</script>
+</head>
+
+<body background="4.jpg" onload="startTime()">
+<div id="info">
+  <p id="ora" align="right"></p>
+  <h1>Sistemul Solar</h1>
+  <p><a onmouseenter="enterimg('img')" onmouseleave="leaveimg('img')" >
+        <img id="img" src="6.webp">
+  <a/>Calea Lactee, este galaxia gazdă a Sistemului Solar și a altor aproximativ 100-400 miliarde de stele cu planetele lor, precum și a peste 1.000 nebuloase. Toate obiectele din galaxie orbitează în jurul centrului de masă al galaxiei, numit și centru galactic.  </p>
+  <ul>
+    <li><b>Cum s-a format Sistemul Solar?</b><br>
+      Sistemul solar este format din Soare împreună cu sistemul său planetar care cuprinde opt planete împreună cu sateliții lor naturali și alte obiecte non-stelare.
+El s-a format acum 4,6 miliarde de ani, ca urmare a colapsului gravitațional al unui gigant nor molecular. Cel mai masiv obiect este steaua centrală - Soarele, al doilea obiect ca masă fiind planeta Jupiter. Cele patru planete interioare mici, Mercur, Venus, Pământul și Marte, numite planete terestre / planete telurice, sunt compuse în principal din roci și metal. Cele patru planete exterioare, numite giganți gazoși Jupiter, Saturn ,Uranus si Neptun, sunt mult mai masive decât cele telurice si sunt formate in mare parte din gaz.</li>
+<br>
+    <li><b>Cum s-au format planetele?</b><br>
+      În urma punctului de fierbere foarte mare, metalele și silicații au putut rezista în interiorul fierbinte al sistemului solar, aproape de Soare, iar acestea au format planetele de rocă precum: Mercur, Venus, Terra și Marte. Giganții gazoși precum: Jupiter, Saturn, Uranus și Neptun au fost formați mai departe de Soare, dincolo de linia de îngheț.</li>
+<br>
+    <li><b>Câte planete se rotesc în jurul Soarelui?</b> <br>
+      În jurul Soarelui se rotesc 8 planete, 5 planete pitice, 171 de sateliți ai planetelor, sute de mii de asteroizi și mai multe mii de comete.</li>
+      <li><b>Câte planete sunt în sistemul solar?</b>
+        <ul><li>Mercur</li>
+            <li>Venus</li>
+            <li>Terra</li>
+            <li>Marte</li>
+            <li>Jupiter</li>
+            <li>Saturn</li>
+            <li>Uranus</li>
+            <li>Neptun</li></ul>
+      </li>
+<br>
+  <li><b>Planetele pitice sunt:</b><br>
+    <ul><li>Ceres</li>
+        <li>Pluto</li>
+        <li>Eris</li>
+        <li>Makemake</li>
+        <li>Haumea</li></ul>
+  Asteroizii se pot găsi în două regiuni, denumite centuri de asteroizi, acolo unde se află Marte și Jupiter, centura principală, iar după Neptun, centura lui Kuiper.
+  </li>
+  </ul>
+  <p>Pentru a afla mai multe informații click <input type="button" value="aici" onclick="deschide()" />  </p>
+</div>
+<div id="meniu">
+  <div id="butoane">
+    <div id="butoane_1">
+      <div id="buton"><a href="index.html">Home</a></div>
+      <div id="buton"><a href="despre.html">Sistemul Solar</a></div>
+      <div id="buton"><a href="planete.html">Planetele Sistemului Solar</a></div>
+	    <div id="buton"><a href="http://localhost/registration/test.php">Test grilă</a></div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
